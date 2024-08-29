@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles10.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- icones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Music Player</title>
+</head>
+
+<body>
+
+    <!-- Page générale -->
+    <section id="general">
+
+        <!-- Bandeau taille -->
+        <section id="window_size" class="big_section">
+            <p3 id="window_size_text"></p3>
+        </section>
+
+        <!-- Bandeau Appli -->
+        <section id="screen" class="big_section">
+
+            <header>
+                <!-- Section boutons de lecture -->
+                <section>
+                    <article id="buttons_article">
+                        <button id="previous"><i class="fa-solid fa-circle-arrow-left bigger"></i></button>
+                        <button id="play"><i class="fa-regular fa-circle-play bigger"></i></button>
+                        <button id="next"><i class="fa-solid fa-circle-arrow-right bigger"></i></button>
+                    </article>
+                    <article id="sound_combo">
+                        <button id="down" class="sound_button"><i class="fa-solid fa-volume-low"></i></button>
+                        <input type="range" min="0" max="1" value="0.5" id="smaller_range" step="0.1">
+                        <button id="up" class="sound_button"><i class="fa-solid fa-volume-high"></i></button>
+                    </article>
+                </section>
+
+                <!-- Section pour le changement de taille Small -->
+                <section id="small_size">
+
+                    <!-- Section Références + curseur de lecture -->
+                    <section>
+                        <p2 id="Author">Nom Artiste</p2><br>
+                        <p3 id="Title">Titre de la chanson</p3><br>
+                        <input type="range" min="0" max="100" value="0" id="bigger_range">
+                    </section>
+
+                    <!-- Section Recherche -->
+                    <section id="research">
+                        <button id="search_button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input type="text" placeholder="Recherche" id="search_input">
+                    </section>
+
+                </section>
+            </header>
+
+
+            <section id="middle_screen">
+
+                <!-- Music/Video/Podcasts -->
+                <section>
+                    <nav>
+                        <ul>
+                            <li><a href="musiccs">Music</a></li>
+                            <li><a href="videos">Vidéos</a></li>
+                            <li><a href="podcasts">Podcasts</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <!-- Articles photo + 2 titres -->
+                <section id="music_space">
+                    <article id = "music0.1" class="music black_border">
+                        <section id="music1" class="picture"></section>
+                        <p1>Titre</p1>
+                        <p3>Nom artiste</p3>
+                    </article>
+
+                    <article id = "music0.2"class="music black_border">
+                        <section id="music2" class="picture"></section>
+                        <p1>Titre</p1>
+                        <p3>Nom artiste</p3>
+                    </article>
+
+                    <article id = "music0.3" class="music black_border">
+                        <section id="music3" class="picture"></section>
+                        <p1>Titre</p1>
+                        <p3>Nom artiste</p3>
+                    </article>
+
+                    <article id = "music0.4" class="music black_border">
+                        <section id="music4" class="picture"></section>
+                        <p1>Titre</p1>
+                        <p3>Nom artiste</p3>
+                    </article>
+
+                    <article id = "music0.5" class="music black_border">
+                        <section id="music5" class="picture"></section>
+                        <p1>Titre</p1>
+                        <p3>Nom artiste</p3>
+                    </article>
+
+                    <article id = "music0.6" class="music black_border">
+                        <section id="music6" class="picture"></section>
+                        <p1>Titre</p1>
+                        <p3>Nom artiste</p3>
+                    </article>
+
+                    <article id = "music0.7" class="music black_border">
+                        <section id="music7" class="picture"></section>
+                        <p1>Titre</p1>
+                        <p3>Nom artiste</p3>
+                    </article>
+
+                </section>
+            </section>
+
+        </section>
+
+        <footer>
+            <audio id="mediaplayer" hidden controls></audio>
+        </footer>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
