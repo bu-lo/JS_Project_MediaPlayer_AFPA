@@ -17,7 +17,6 @@ let currentMusicIndex = -1;
 let currentMusicVolume = 0.5;
 const mediaplayer = document.getElementById("mediaplayer");
 
-
 // *** INITIALIZATION ***
 window.onload = function () {
     mediaplayer.src = tabMusic[currentMusicIndex][2];
@@ -32,8 +31,8 @@ tabMusic.forEach((music, index) => {
     const article = articles[index];
     if (article) {
         // Mettre à jour le titre et le nom de l'auteur
-        const titleElement = article.querySelector('p1');
-        const artistElement = article.querySelector('p3');
+        const titleElement = article.querySelector('.p1');
+        const artistElement = article.querySelector('.p3');
         
         titleElement.textContent = music[0]; // Title
         artistElement.textContent = music[1]; // Author
@@ -130,8 +129,8 @@ function filterMusic() {                                 ///////////////////////
     
     // forEach music
     document.querySelectorAll('.music').forEach(article => {
-        const title = article.querySelector('p1').textContent.toLowerCase();
-        const artist = article.querySelector('p3').textContent.toLowerCase();
+        const title = article.querySelector('.p1').textContent.toLowerCase();
+        const artist = article.querySelector('.p3').textContent.toLowerCase();
         
         // == Research ?
         if (title.includes(query) || artist.includes(query)) {
