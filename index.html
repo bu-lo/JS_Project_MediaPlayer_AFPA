@@ -32,14 +32,14 @@
                 <!-- Section boutons de lecture -->
                 <section>
                     <article id="buttons_article">
-                        <button id="previous"><i class="fa-solid fa-circle-arrow-left bigger"></i></button>
-                        <button id="play"><i class="fa-regular fa-circle-play bigger"></i></button>
-                        <button id="next"><i class="fa-solid fa-circle-arrow-right bigger"></i></button>
+                        <button id="previous" aria-label="Play previous music"><i class="fa-solid fa-circle-arrow-left bigger"></i></button>
+                        <button id="play" aria-label="Play music"><i class="fa-regular fa-circle-play bigger"></i></button>
+                        <button id="next" aria-label="Play next music"><i class="fa-solid fa-circle-arrow-right bigger"></i></button>
                     </article>
                     <article id="sound_combo">
-                        <button id="down" class="sound_button"><i class="fa-solid fa-volume-low"></i></button>
-                        <input type="range" min="0" max="1" value="0.5" id="smaller_range" step="0.1">
-                        <button id="up" class="sound_button"><i class="fa-solid fa-volume-high"></i></button>
+                        <button id="down" aria-label="Turn down the music" class="sound_button"><i class="fa-solid fa-volume-low"></i></button>
+                        <input type="range" aria-label="Changes music sound from 0 to 100%" min="0" max="1" value="0.5" id="smaller_range" step="0.1">
+                        <button id="up" aria-label="Turn up the music" class="sound_button"><i class="fa-solid fa-volume-high"></i></button>
                     </article>
                 </section>
 
@@ -50,7 +50,7 @@
                     <section>
                         <p id="Author" class="p2">Nom Artiste</p>
                         <p id="Title" class="p3">Titre de la chanson</p>
-                        <input type="range" min="0" max="100" value="0" id="bigger_range">
+                        <input type="range" aria-label="Changes the progress of sound playback" min="0" max="100" value="0" id="bigger_range">
                     </section>
 
                     <!-- Section Recherche -->
