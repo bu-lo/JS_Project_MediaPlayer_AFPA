@@ -146,14 +146,16 @@ function filterMusic() {                                 ///////////////////////
 }
 
 function updateDownIcon() {
-    if (document.getElementById('smaller_range').value == 0) {
+    const volume = mediaplayer.volume; // Utiliser le volume du lecteur média pour les vérifications
+    
+    if (volume < 0.1) {
         document.getElementById('down').innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
     } else {
         document.getElementById('down').innerHTML = '<i class="fa-solid fa-volume-low"></i>';
     }
 
-    if (document.getElementById('smaller_range').value == 1) {
-        document.getElementById('up').innerHTML = '<i class="fa-solid fa-plane-departure"></i>';
+    if (volume > 0.9) {
+        document.getElementById('up').innerHTML = '<i class="fa-solid fa-skull-crossbones"></i>';
     } else {
         document.getElementById('up').innerHTML = '<i class="fa-solid fa-volume-high"></i>';
     }
@@ -199,6 +201,7 @@ document.getElementById("down").addEventListener("click",function(){
 
 document.getElementById("smaller_range").addEventListener("change",function(){
     mediaplayer.volume = document.getElementById("smaller_range").value;
+    updateDownIcon();
 })
 
 
