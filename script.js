@@ -65,6 +65,10 @@ function playMusicById(id) {
 }
 
 function play() {
+    if (currentMusicIndex === -1) {
+        currentMusicIndex = 0;
+        mediaplayer.src = tabMusic[currentMusicIndex][2];
+    }
     mediaplayer.play();
     highlightCurrentMusic();
     updateMusicDetails();
