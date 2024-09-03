@@ -30,38 +30,41 @@
 
             <header>
                 <!-- Section boutons de lecture -->
-                <section>
+                <section id="first" class="header_parameters">
                     <article id="buttons_article">
-                        <button id="previous" aria-label="Play previous music"><i class="fa-solid fa-circle-arrow-left bigger"></i></button>
-                        <button id="play" aria-label="Play music"><i class="fa-regular fa-circle-play bigger"></i></button>
-                        <button id="next" aria-label="Play next music"><i class="fa-solid fa-circle-arrow-right bigger"></i></button>
+                        <button id="previous" aria-label="Play previous music" class ="bigger"><i
+                                class="fa-solid fa-circle-arrow-left"></i></button>
+                        <button id="play" aria-label="Play music" class ="bigger"><i
+                                class="fa-regular fa-circle-play"></i></button>
+                        <button id="next" aria-label="Play next music" class ="bigger"><i
+                                class="fa-solid fa-circle-arrow-right"></i></button>
                     </article>
                     <article id="sound_combo">
-                        <button id="down" aria-label="Turn down the music" class="sound_button"><i class="fa-solid fa-volume-low"></i></button>
-                        <input type="range" aria-label="Changes music sound from 0 to 100%" min="0" max="1" value="0.5" id="smaller_range" step="0.1">
-                        <button id="up" aria-label="Turn up the music" class="sound_button"><i class="fa-solid fa-volume-high"></i></button>
+                        <button id="down" aria-label="Turn down the music" class="sound_button"><i
+                                class="fa-solid fa-volume-low"></i></button>
+                        <input type="range" aria-label="Changes music sound from 0 to 100%" min="0" max="1" value="0.5"
+                            id="smaller_range" step="0.1">
+                        <button id="up" aria-label="Turn up the music" class="sound_button"><i
+                                class="fa-solid fa-volume-high"></i></button>
                     </article>
                 </section>
 
-                <!-- Section pour le changement de taille Small -->
-                <section id="small_size">
-
-                    <!-- Section Références + curseur de lecture -->
-                    <section>
-                        <p id="Author" class="p2">Nom Artiste</p>
-                        <p id="Title" class="p3">Titre de la chanson</p>
-                        <input type="range" aria-label="Changes the progress of sound playback" min="0" max="100" value="0" id="bigger_range">
-                    </section>
-
-                    <!-- Section Recherche -->
-                    <section id="research">
-                        <button id="search_button">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                        <input type="text" placeholder="Recherche" id="search_input">
-                    </section>
-
+                <!-- Section Références + curseur de lecture -->
+                <section class="header_parameters small_size">
+                    <p id="Author" class="p2">Nom Artiste</p>
+                    <p id="Title" class="p3">Titre de la chanson</p>
+                    <input type="range" aria-label="Changes the progress of sound playback" min="0" max="100" value="0"
+                        id="bigger_range">
                 </section>
+
+                <!-- Section Recherche -->
+                <section id="research" class="header_parameters small_size">
+                    <button id="search_button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <input type="text" placeholder="Recherche" id="search_input">
+                </section>
+
             </header>
 
 

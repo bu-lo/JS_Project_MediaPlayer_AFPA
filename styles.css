@@ -1,9 +1,43 @@
-#general {
-    width: 992px;
+/* RESET  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
     height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#general {
+    max-width: 1024px; /* Limite la largeur maximale à 1024px */
+    max-height: 871px; /* Limite la hauteur maximale à 871px */
+    width: 90vw; /* 90% de la largeur de la fenêtre */
+    height: 80vh; /* 80% de la hauteur de la fenêtre */
     font-family: Roboto;
     font-size: 12px;
-    padding:5px;
+}
+
+#window_size{
+    height: 45px;
+    border-radius: 5px;
+    background-color: #f9f0c5;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#window_size_text::before {
+    content: "Large";
+}
+
+#screen{
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .p1 {
@@ -22,43 +56,20 @@
 
 .p3 {
     margin: 2px;
-
-}
-
-.black_border {
-    border: 0.5px solid #ececec;
-}
-
-#window_size {
-    width: 82.5%;
-    height: 7%;
-    border-radius: 5px;
-    background-color: #f9f0c5;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-#window_size_text::before {
-    content: "Large";
-}
-
-#screen {
-    width: 80%;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-right: 10px;
-    padding-left: 10px;
+}
+
+.header_parameters{
+    width: 30%;
 }
 
 #bigger_range {
-    width: 220px;
+    width: 100%;
 }
 
 #buttons_article {
@@ -67,18 +78,22 @@ header {
     margin-bottom: 10px;
 }
 
-.sound_button{
-    width:30px;
+#sound_combo{
+    display: flex;
+    justify-content: space-between;
 }
 
-#small_size { 
-    display: flex;
-    flex-direction: row;
-    gap:70px;
+#smaller_range{
+    width:50%;
+}
+
+.sound_button{
+    width: 20%;
 }
 
 .bigger {
-    width: 45px;
+    padding: 1px;
+    width: 30%;
 }
 
 #research {
@@ -86,45 +101,61 @@ header {
     align-items: flex-start;
 }
 
+#search_button{
+    width: 30px;
+}
+
+#search_input{
+    width: 100%;
+}
+
 #middle_screen {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 ul {
     list-style: none;
     padding: 0px;
-    padding-left: 10px;
 }
 
 li {
     border: 0.5px solid #ececec;
     border-bottom: none;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-    padding: 5px 30px 5px 10px;
+    padding: 8px 30px 5px 10px;
 }
 
 a {
     text-decoration: none;
 }
 
+#middle_screen {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    gap: 2.5vw;
+    width: 100%;
+}
+
 #music_space {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 560px;
+    flex-wrap: wrap; 
+    gap: 3vw;
+    justify-content: flex-start; 
+    max-width: calc(4 * 140px + 3 * 3vw);
 }
 
 .music {
-    width: 120px;
+    width: 140px;
+    height: 220px;
     text-align: center;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: right;
     gap: 10px;
     padding-top: 10px;
     border: 0.5px solid #ececec;
@@ -132,8 +163,8 @@ a {
 }
 
 .picture {
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    height: 140px;
 }
 
 #music1 {
@@ -181,14 +212,9 @@ footer{
     box-shadow: 0 2px 2px #7F7676;
 }
 
-
 /* *** MEDIUM SIZE *** */
 
-@media only screen and (max-width: 768px) {
-    #general {
-        width: 768px;
-    }
-
+@media only screen and (max-width: 930px) {
     #window_size {
         background-color: #d4ebce;
     }
@@ -198,32 +224,16 @@ footer{
         content: "Medium";
     }
 
-    header {
-        gap: 20px;
-    }
-
-    #bigger_range {
-        width: 180px;
-    }
-
-    #smaller_range {
-        width: 110px;
-    }
-
-    #small_size { 
-        gap:45px;
-    }
-
-    .bigger {
-        width: 35px;
-    }
-
-    #search_input {
-        width: 100px;
-    }
-
     #middle_screen {
-        gap: 65px;
+        gap: 40px;
+    }
+
+    #music_space {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 3vw;
+        justify-content: flex-start; 
+        max-width: calc(3 * 130px + 2 * 3vw);
     }
 
     .music {
@@ -231,21 +241,17 @@ footer{
     }
 
     .picture {
-        width: 130px;
+        width: 129px;
         height: 130px;
     }
 }
 
 
 /* *** SMALL SIZE *** */
-@media only screen and (max-width: 600px) {
-    #general {
-        width: 600px;
-    }
+@media only screen and (max-width: 718px) {
 
     #window_size {
         background-color: #c9e5f3;
-        width: 83.7%;
     }
 
     #window_size_text::before {
@@ -254,67 +260,74 @@ footer{
     }
 
     header {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
     }
 
-    #small_size {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-top: 20px;
-        gap:10px;
+    #smaller_range{
+        width:65%;
     }
-
-    #bigger_range {
-        width: 260px;
-    }
-
-    #smaller_range {
-        width: 300px;
-    }
-
-    .bigger {
-        width: 100px;
-    }
-
+    
     .sound_button{
-        width: 70px;
+        width: 15%;
+    }
+    
+    .bigger {
+        width: 27%;
+        margin-bottom: 3px;
+    }
+    
+    #search_input{
+        width: 100%;
     }
 
-    #sound_combo{
-        display:flex;
-        justify-content: space-between;
+    #first{
+        width:100%;
+        grid-column: 1/3;
+        margin-bottom: 40px;
     }
 
-    #search_input {
-        width: 140px;
+    .small_size{
+        width:100%;
+    }
+
+    #bigger_range{
+        max-width: 200px;
+    }
+
+    #music_space {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 10px;
+        justify-content: flex-start; 
+        max-width: calc(2 * 160px + 10px);
     }
 
     #middle_screen {
-        gap: 40px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        width: 100%;
+        gap:10px;
     }
-
+    
     .music {
-        width: 150px;
+        width: 160px;
+        height: 220px;
+        gap: 10px;
     }
 
     .picture {
-        width: 150px;
-        height: 150px;
+        width: 100%;
+        height: 220px;
     }
 }
 
 
 /* *** XSMALL SIZE *** */
-@media only screen and (max-width: 450px) {
-    #general {
-        width: 450px;
-    }
-
+@media only screen and (max-width: 572px) {
     #window_size {
         background-color: #ecd2d1;
-        width: 84.2%;
     }
 
     #window_size_text::before {
@@ -322,37 +335,22 @@ footer{
         content: "Extra Small";
     }
 
-    #small_size {
+    header {
         display: flex;
         flex-direction: column;
-        gap:20px;
-        padding-top: 20px;
     }
 
-    #bigger_range {
-        width: 340px;
-
+    .small_size {
+        margin-bottom:20px;
     }
 
-    #smaller_range {
-        width: 270px;
-    }
-
-    .bigger {
-        width: 90px;
-    }
-
-    .sound_button{
-        width: 60px;
+    #first{
+        margin-bottom: 40px;
     }
 
     #sound_combo{
         display:flex;
         justify-content: space-between;
-    }
-
-    #search_input {
-        width: 400px;
     }
 
     #middle_screen {
@@ -361,30 +359,73 @@ footer{
         flex-direction:column;
     }
 
+    #bigger_range{
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
     #middle_screen {
         display: flex;
         justify-content: space-between;
         padding-top: 20px;
     }
 
+    #small_size {
+       margin-bottom:20px;
+    }
+
     .music {
-        width: 160px;
+        width: 45%;
+        height: 260px;
+        margin-bottom:10px;
     }
 
     .picture {
-        width: 160px;
-        height: 160px;
+        width: 100%;
     }
     
     #music_space {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 400px;
-        padding-left: 10px;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        gap: 10px;
+        max-width: 100%;
+    }
+}
+
+
+/* *** XSMALL SIZE *** */
+@media only screen and (max-width: 425px) {
+    .music {
+        width: 47%;
+        height: 220px;
     }
 
-    ul {
-        padding-right:10px;
+    .picture {
+        width: 100%;
+    }
+}
+
+/* *** XSMALL SIZE *** */
+@media only screen and (max-width: 375px) {
+    .music {
+        width: 47%;
+        height: 190px;
+    }
+
+    .picture {
+        width: 100%;
+    }
+}
+
+/* *** XSMALL SIZE *** */
+@media only screen and (max-width: 320px) {
+    .music {
+        width: 47%;
+        height: 170px;
+    }
+
+    .picture {
+        width: 100%;
     }
 }
