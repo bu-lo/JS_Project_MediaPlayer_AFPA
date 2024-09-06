@@ -15,6 +15,7 @@ html, body {
 
 #general {
     max-width: 1024px; /* Limite la largeur maximale à 1024px */
+    min-width: 300px;
     max-height: 871px; /* Limite la hauteur maximale à 871px */
     width: 90vw; /* 90% de la largeur de la fenêtre */
     height: 80vh; /* 80% de la hauteur de la fenêtre */
@@ -32,6 +33,7 @@ html, body {
 
 #window_size_text::before {
     content: "Large";
+    font-weight: bold;
 }
 
 #screen{
@@ -298,9 +300,9 @@ footer{
     #music_space {
         display: flex;
         flex-wrap: wrap; 
-        gap: 10px;
+        gap: 3vw;
         justify-content: flex-start; 
-        max-width: calc(2 * 160px + 10px);
+        max-width: calc(2 * 160px + 3vw);
     }
 
     #middle_screen {
@@ -325,7 +327,7 @@ footer{
 
 
 /* *** XSMALL SIZE *** */
-@media only screen and (max-width: 572px) {
+@media only screen and (max-width: 575px) {
     #window_size {
         background-color: #ecd2d1;
     }
@@ -393,12 +395,39 @@ footer{
     }
 }
 
+/* *** XSMALL SIZE *** */
+@media only screen and (max-width: 480px) {
+    .music {
+        width: 47%;
+        height: 240px;
+    }
+
+    .picture {
+        width: 100%;
+    }
+
+    .p1{
+        font-size: 14px;
+    }
+}
 
 /* *** XSMALL SIZE *** */
 @media only screen and (max-width: 425px) {
     .music {
         width: 47%;
         height: 220px;
+    }
+
+    .picture {
+        width: 100%;
+    }
+}
+
+/* *** XSMALL SIZE *** */
+@media only screen and (max-width: 408px) {
+    .music {
+        width: 47%;
+        height: 210px;
     }
 
     .picture {
@@ -415,6 +444,14 @@ footer{
 
     .picture {
         width: 100%;
+    }
+
+    .p1{
+        font-size: 12px;
+    }
+
+    .p3{
+        font-size: 10px;
     }
 }
 
