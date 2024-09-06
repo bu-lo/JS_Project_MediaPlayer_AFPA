@@ -161,7 +161,11 @@ a {
     gap: 10px;
     padding-top: 10px;
     border: 0.5px solid #ececec;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);  
+}
+
+.music:hover{
+    transform: scale(1.05);
 }
 
 .picture {
