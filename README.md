@@ -5,6 +5,6 @@
 <p align="center"><strong> - PLAY mode - </strong></p>
 <img align="center" src="./previews/Play.PNG" width="920" height="670" /><br>
 <p align="center"><strong> - RESEARCH mode - </strong></p>
-<img align="center" src="./previews/research_medium.PNG" width="750" height="450" />
+<img align="center" src="./previews/research_medium.PNG" width="750" height="400" />
 
 
